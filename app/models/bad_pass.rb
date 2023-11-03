@@ -1,0 +1,2 @@
+class BadPass < ApplicationRecord
+end
