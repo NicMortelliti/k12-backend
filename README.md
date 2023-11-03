@@ -14,6 +14,8 @@ Steps to run the application:
 
    - The root folder contains the Dockerfile, docker-compose.yml and other files
 
+1. Run `docker-compose run --no-deps web rails new . --api --force --database=postgresql`
+
 1. Ensure `config/database.yml` contains **only** the following code:
 
    ```yaml
