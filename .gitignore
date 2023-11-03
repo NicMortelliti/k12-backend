@@ -21,3 +21,4 @@ node_modules/
 
 # Ignore temp files
 *.tmp
+/tmp
