@@ -1,25 +1,26 @@
 version: '3'
 services:
   db:
+    container_name: k12-db
     image: postgres:14.2-alpine
-    container_name: myapp-postgres-14.2
     volumes:
       - postgres_data:/var/lib/postgresql/data
     command: "postgres -c 'max_connections=500'"
     environment:
-      POSTGRES_DB: myappdb
-      POSTGRES_USER: my_user
-      POSTGRES_PASSWORD: ILoveDoingKnowBe4Training!
+      POSTGRES_DB: k12appdb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
     ports:
       - '5432:5432'
-  myapp-web:
+  web:
+    container_name: k12-web
     build: .
     command: "bundle exec rails s -p 3000 -b '0.0.0.0'"
     environment:
       DB_HOST: db
-      DB_NAME: myappdb
-      DB_USERNAME: my_user
-      DB_PASSWORD: ILoveDoingKnowBe4Training!
+      DB_NAME: k12appdb
+      DB_USERNAME: admin
+      DB_PASSWORD: admin
     volumes:
       - .:/app:cached
     ports:
@@ -30,4 +31,4 @@ volumes:
   postgres_data: {}
 networks:
   default:
-    name: myapp_default
+    name: k12_default
