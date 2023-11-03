@@ -15,4 +15,4 @@ node_modules
 .vscode/*
 
 # Ignore any files in the tmp directory
-tmp/*
+tmp/
