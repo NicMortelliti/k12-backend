@@ -1,2 +1,0 @@
-class BadPassesController < ApplicationController
-end
