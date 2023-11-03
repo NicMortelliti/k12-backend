@@ -1,0 +1,12 @@
+# Ignore git and cache directories
+.git
+.cache
+
+# Ignore logs
+*.log
+
+# Ignore node modules
+node_modules
+
+# Ignore any env files
+*.env
