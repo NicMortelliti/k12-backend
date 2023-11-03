@@ -1,31 +1,24 @@
-# Dockerized Rails and Postgres
+# README
 
-This project is based on the article [here](https://www.knowbe4.com/careers/blogs/engineering/railspostgresqldocker).
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-Instead of using AppSmiths built-in database offerings, we've created our own using Rails and Postgres to allow for user authentication and user sessions.
+Things you may want to cover:
 
-## Dependencies
+* Ruby version
 
-- [Docker with Docker Compose](https://www.docker.com/get-started/) (Docker Desktop recommended)
+* System dependencies
 
-Steps to run the application:
+* Configuration
 
-1. In a terminal, navigate to this projects root folder.
+* Database creation
 
-   - The root folder contains the Dockerfile, docker-compose.yml and other files
+* Database initialization
 
-1. Ensure `config/database.yml` contains **only** the following code:
+* How to run the test suite
 
-   ```yaml
-   default: &default
-   adapter: postgresql
-   encoding: unicode
-   host: db
-   username: postgres
-   password: password
-   pool: 5
-   ```
+* Services (job queues, cache servers, search engines, etc.)
 
-1. In the terminal, run `docker-compose up`
+* Deployment instructions
 
-1. The postgres database and rails application should now be running
+* ...

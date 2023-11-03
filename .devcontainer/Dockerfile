@@ -4,7 +4,8 @@ RUN apk add --update build-base bash bash-completion libffi-dev tzdata postgresq
 
 WORKDIR /app
 
-COPY Gemfile* /app/
+# Copy the Gemfiles from config to the working directory
+COPY ./gemfiles/Gemfile* /app/
 
 RUN gem install bundler
 
