@@ -10,3 +10,9 @@ node_modules
 
 # Ignore any env files
 *.env
+
+# Ignore any files in the .vscode directory
+.vscode/*
+
+# Ignore any files in the tmp directory
+tmp/*
