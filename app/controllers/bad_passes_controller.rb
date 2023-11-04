@@ -1,0 +1,2 @@
+class BadPassesController < ApplicationController
+end
